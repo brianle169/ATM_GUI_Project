@@ -53,10 +53,13 @@ public class Log_In {
         try {
             Scanner reader = new Scanner(database);
             while (reader.hasNextLine()){
-                if (reader.nextLine().isEmpty()) {break;}
-                String[] line = reader.nextLine().split(",");
-                ID = line[0];
-                account = new Account(Integer.parseInt(line[0]),line[1],line[2],Double.parseDouble(line[3]),line[4]);
+                String line = reader.nextLine();
+                if (line.isEmpty()){
+                    break;
+                }
+                String[] line_split = line.split(",");
+                ID = line_split[0];
+                account = new Account(Integer.parseInt(line_split[0]),line_split[1],line_split[2],Double.parseDouble(line[3]),line[4]);
                 userData.put(ID,account);
             }
             reader.close();
