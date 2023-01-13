@@ -30,13 +30,13 @@ public class Account {
             accountID = updateAccountID();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        } catch (IndexOutOfBoundsException exception){
+        } catch (IndexOutOfBoundsException | NumberFormatException exception){
             accountID = 1000000;
         }
         accountID++;
     }
 
-    private int updateAccountID() throws FileNotFoundException, IndexOutOfBoundsException {
+    private int updateAccountID() throws FileNotFoundException, IndexOutOfBoundsException, NumberFormatException {
         File data = new File("test_in.txt");
         Scanner reader = new Scanner(data);
         ArrayList<Integer> ID_List = new ArrayList<>();
