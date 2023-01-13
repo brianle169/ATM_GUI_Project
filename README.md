@@ -5,6 +5,7 @@ This project attempts to re-create an ATM Graphical User Interface using Java Sw
 The sole purpose of this project is to practice the followings: 
 * OOP (inheritance, encapsulation)
 * UI design with Java Swing
+* Files I/O (.txt)
 * Java basics
 
 To test this project, follow these steps:
