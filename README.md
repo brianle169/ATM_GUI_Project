@@ -1,4 +1,4 @@
-# ATM_GUI_Project #
+# ATM GUI Project #
 
 This project attempts to re-create an ATM Graphical User Interface using Java Swing.
 
